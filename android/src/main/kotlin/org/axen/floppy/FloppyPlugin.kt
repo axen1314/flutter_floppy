@@ -53,7 +53,7 @@ class FloppyPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
 
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
     val method = call.method
-    val delegate = floppy.delegates[method]
+    val delegate = floppy.getDelegate(method)
     if (delegate != null) {
       floppy.builder(call.method)
         .context(activity)
