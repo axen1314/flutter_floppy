@@ -60,7 +60,7 @@ class FloppyPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
         .arguments(call.arguments)
         .callback(object: FloppyCallback {
           override fun onSuccess(value: Any?) {
-            if (value !is Unit) result.success(it)
+            if (value !is Unit) result.success(value)
           }
         })
         .invoke()
