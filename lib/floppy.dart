@@ -33,11 +33,11 @@ class Floppy {
     }
   }
 
-  void addDelegate(String method, FloppyDelegate delegate) {
+  void define(String method, FloppyDelegate delegate) {
     _delegates[method] = delegate;
   }
 
-  void removeDelegate(String method) {
+  void remove(String method) {
     _delegates.remove(method);
   }
 }

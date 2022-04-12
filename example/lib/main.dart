@@ -20,13 +20,13 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    Floppy.instance.addDelegate("changeText", _handleChangeText);
+    Floppy.instance.define("changeText", _handleChangeText);
   }
 
   @override
   void dispose() {
     super.dispose();
-    Floppy.instance.removeDelegate("changeText");
+    Floppy.instance.remove("changeText");
   }
 
   @override
