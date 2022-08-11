@@ -34,9 +34,10 @@ class FloppyPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
         }
 
         override fun error(
-          errorCode: String?,
+          errorCode: String,
           errorMessage: String?,
-          errorDetails: Any?) {
+          errorDetails: Any?
+        ) {
 
         }
 
